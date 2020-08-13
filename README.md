@@ -7,10 +7,14 @@
 ## Stack
 node.js
 
+## TODO
+ - get instagram token
+ - downloaded
+ - merge video and audio
+
 ## Authors
 
 * **Kim mingu**
-
 
 ## License
 
