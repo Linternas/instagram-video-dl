@@ -2,7 +2,7 @@ const axios = require('axios');
 
 const config = {
   headers: {
-    cookie: 'XW1B9AALAAGQVeq7Bws23Uqd1eWC;fbm_124024574287414=base_domain=.instagram.com;ig_did=EA8C66E6-C5FB-4F09-AA97-D93D9D46B199;csrftoken=hGyCnFZgyK6prUzGPWXd1jljfKcmn7oq;sessionid=1390665493%3At16kc2unXFNoxx%3A10;ds_user_id=1390665493;shbid=8664;rur=FTW;shbts=1597321435.0675926;fbsr_124024574287414=7Ltp89-U5FuW1aXBZKsWb85xZszx03otrq99wX_xggE.eyJ1c2VyX2lkIjoiMTAwMDA3OTA2NTAyODA5IiwiY29kZSI6IkFRQ1RneWU3bnotV3dkeHBDcjJrNlVKWC1kdG9KQmY0RVpka1FlMkN1RzBfcDhBZ2g0MjBPYmhTWlBhRE5yblB5bGNEbWN0bEo3LVVaRmJ2TFlKRFVDbEdiM3BSNGZNT3M2RllWenpOOXRvNENJWWY1RTNJRkNtOXFORXdJbVdrOXA5djZGelotS2tHQ25YR0lIeHVuUTF5VW9sV1NNMzB6d0dQTlh6OU5PT1F4TndxWlBUUHA0WmNDcG9ZV0N6X0JvRHptZTdrUXFCb0NGWmJRXzZVZUM0SmZuTzBIdTIxSlZOXzhBeWh3ZXBoRi05bFl0dktlR1BpRDhXamZERnc4Ny1kcnIyTHJ2ZjBnUWNLMlFOVFJRSmlwTnNMdjBsM3RkRC1PUFBFRFZpTThkbmgzZ1Jfc3Ztd1R4dEVXMVR6dDNjRXp5cG91X3NBMng0RnBYbUVVa2dWIiwib2F1dGhfdG9rZW4iOiJFQUFCd3pMaXhuallCQUtUbHB2ZDJQRGtlQVFmc0M1WW4wUXQ1MENLc3BZMW85b2doUkJLZ3Y5aGNaQ0RQSlRHNHR4MXBWdGFGVlVORjVIZFgxSG83ekRvelhCbjVZRGVLTTRDNjkyRlRNYVN2UTRYRVA3N1l4ZVZ6ZmJDWkJKYWpZb2tXa3MyM21WQXkwMENXemRzOURObUx3Tng3WFJxZE1LdWJaQnNHOFBjRlJaQUZCUEZrIiwiYWxnb3JpdGhtIjoiSE1BQy1TSEEyNTYiLCJpc3N1ZWRfYXQiOjE1OTczMjE1NDd9;urlgen="{\"114.205.163.25\": 9318}:1k6D4p:CO2Q04C0VYWk1xP5ywvLsmoYDhk";',
+    cookie: 'ig_did=0987A9FA-9ECB-4DDE-AD88-240D1200E769; mid=XzVe0QALAAHr3gVqoHvxismOKBl4; fbm_124024574287414=base_domain=.instagram.com; shbid=8664; shbts=1597333206.792559; rur=FTW; fbsr_124024574287414=IP7knr5BgPSb7_UFRjfR225Flleteve7VgSL7FSlZXQ.eyJ1c2VyX2lkIjoiMTAwMDA3OTA2NTAyODA5IiwiY29kZSI6IkFRQzBxay04cUZwT1QzckZGaW9yT1FzMXNxdHlBYTd4Y29pbll3eDRTMjUwLUFDSTNCQVhZLWxNZjEwSWx3VXFVNlZOQlk2X1A2cTJ5MWR6c3QzMWV0djY2c2NsZUV2TlEtZXRmalphVmVfRWptSDhOZUJnWUxRdUNNNUhiUGlBVVhWUmZFVFZpVzI0b3RLMVo3cTc3bWJUZWQxVzlxT19TaHVBYjJqTXJrd0NfclJrcGxPekRCX19wOHJzWUpGN3VGbDl6Zm5oMjZUbjUwT3MydV9oWlptWWtuajVVam5TbldQMmcxRU8tUGwzM19WVWpqdUVRYmY5UUlaZmJjSVZoS3I5dUNSN2ZGdW4yYU1IQklPVzJSeVc0Wm4ydURZMDV4Rl9BQ2I4ZGZJQUhRR1IzZm1peHJNUHVFRGhRcjVDbER4R2tRNVNXTnN4UWJka21GNTRWRTM3Iiwib2F1dGhfdG9rZW4iOiJFQUFCd3pMaXhuallCQU1YVlZ6R2trWkJxWUNUWFB6RnRRU3cxamY2ZUFJdVpCQ3ZRZ2c4RG5PYVJyTkZ3V2VjRTZWSXkzeVpDb3VtbnI4aVpBNFBKWkJwTWxaQWx5WFh6VjVud2N3UFhDQ1BqSWVRR1I0dWJoNWJoNHdGVFExQlR1Nm9mWkFtV01nQ1dBRjJDdzdhQVdhRVFZVG9uY2drOWNNNXpOZXVud20zZjRlejk1bndOSHBYIiwiYWxnb3JpdGhtIjoiSE1BQy1TSEEyNTYiLCJpc3N1ZWRfYXQiOjE1OTczMzMzNjF9; ds_user_id=1390665493; sessionid=1390665493%3AYIaQ6EDwtEyRiu%3A20; csrftoken=yW0XiEjsp9Dhck0gtCoTz6OMwopjfuQo; urlgen="{\"114.205.163.25\": 9318}:1k6Fzf:3uNEUNeEVQlbesOoTgwtGKE7lnA',
     'User-Agent': 'Instagram 10.26.0 (iPhone7,2; iOS 10_1_1; en_US; en-US; scale=2.00; gamut=normal; 750x1334) AppleWebKit/420+'
   }
 }
@@ -22,7 +22,9 @@ axios({
   .then(response => {
     const manifest = String(response.data.post_live_item.broadcasts[2].dash_manifest)
     parseVideoUrls(manifest.match(urlRegex))
-    downloadVideo()
+    // downloadVideo()
+    console.log(videoUrl)
+    console.log(audioUrl)
 
   })
   .catch(error => console.log(error.response));
@@ -45,6 +47,8 @@ const parseVideoUrls = (urlList) => {
     })
   }
 
+  console.log(urlInfo)
+
   // 어떤게 가장 큰지 비교한다 세로 우선
   for (const info of urlInfo) {
     if (info.mimeType === 'audio/mp4') {
@@ -53,14 +57,12 @@ const parseVideoUrls = (urlList) => {
     }
 
     if (height < info.height) {
+      height = info.height
       videoUrl = info.url
     }
   }
 }
 
 const downloadVideo = () => {
-  (async () => {
-    const value = await instagram_download.downloadMedia(videoUrl, './')
-    console.log(value)
-  })();
+
 }
