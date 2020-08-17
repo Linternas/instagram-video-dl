@@ -20,13 +20,13 @@ const puppeteer = require('puppeteer');
 
   await page.waitForSelector('.login_form_container > #login_form > #loginform #email')
   await page.click('.login_form_container > #login_form > #loginform #email')
-  await page.type('.login_form_container > #login_form > #loginform #email', '');
+  await page.type('.login_form_container > #login_form > #loginform #email', '01047623204');
 
   await page.waitFor(5000)
 
   await page.waitForSelector('.login_form_container > #login_form > #loginform #pass')
   await page.click('.login_form_container > #login_form > #loginform #pass')
-  await page.type('.login_form_container > #login_form > #loginform #pass', '', { delay: 200 });
+  await page.type('.login_form_container > #login_form > #loginform #pass', 'vpqnralsrn0215', { delay: 200 });
 
 
   await page.waitForSelector('.login_form_container > #login_form > #loginform #loginbutton')
