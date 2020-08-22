@@ -10,7 +10,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.0.20",
     "axios": "^0.19.2",
+    "ffmpeg-concat": "^1.2.3",
+    "fluent-ffmpeg": "^2.1.2",
+    "glob": "^7.1.6",
     "puppeteer": "^5.2.1",
     "video-stream-merger": "^3.6.1"
   }
